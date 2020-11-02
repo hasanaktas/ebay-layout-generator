@@ -6,7 +6,7 @@ import { ShippingCompanies } from 'components'
 const ShippingView = () => {
   const router = useRouter()
   const [shippingCompanies, setShippingCompanies] = useState([])
-  const { shopName, logo } = router.query
+  const { shopName, logo, shipping } = router.query
 
   const onChange = (item) => {
     if (shippingCompanies.indexOf(item) > -1) {

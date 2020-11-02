@@ -65,7 +65,6 @@ const ShippingCompanies = (props) => {
                     display='flex'
                     justifyContent='center'
                     alignItems='center'
-                    bgcolor='rgba(63, 81, 181, 0.05)'
                   >
                     <CheckCircleOutlineOutlinedIcon
                       style={{

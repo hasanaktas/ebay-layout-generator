@@ -4,8 +4,23 @@ import { MainLayout } from 'layouts'
 const Layout = () => {
   const router = useRouter()
   const { shopName, logo, shipping } = router.query
+
+  const backPage = () => {
+    router.push({
+      pathname: '/shipping',
+      query: { shopName: shopName, logo: logo },
+    })
+  }
+
+  const nextPage = () => {
+    router.push({
+      pathname: '/layout',
+      query: { shopName: shopName, logo: logo, shipping: shippingCompanies },
+    })
+  }
+
   return (
-    <MainLayout>
+    <MainLayout backButton={{ disabled: false, click: backPage }} step={3}>
       <h1>Magaza Adi</h1>
       <h4>{shopName}</h4>
       <h1>Secilen Logo</h1>
