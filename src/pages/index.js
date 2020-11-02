@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Button, Grid, TextField } from '@material-ui/core'
+import { Grid, TextField } from '@material-ui/core'
 import { MainLayout } from 'layouts'
 import { useRouter } from 'next/router'
 import Localization from 'localization'
@@ -14,10 +14,11 @@ const ShopNameView = () => {
 
   const nextPage = () => {
     router.push({
-      pathname: '/select-logo',
+      pathname: '/logo',
       query: { shopName: shopName },
     })
   }
+
   return (
     <MainLayout
       step={0}

@@ -95,7 +95,6 @@ const useStyles = makeStyles((theme) => ({
 const Logos = (props) => {
   const classes = useStyles()
   const { shopName, onChange, selectedLogo } = props
-
   return (
     <Grid container spacing={3}>
       {logos.map((item, index) => {

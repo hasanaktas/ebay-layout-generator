@@ -23,7 +23,7 @@ export default function BasicTextFields() {
   }
   const nextPage = () => {
     router.push({
-      pathname: '/shipping-companies',
+      pathname: '/shipping',
       query: { shopName: queryShopName, logo: logo },
     })
   }
