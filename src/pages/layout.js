@@ -26,9 +26,7 @@ const Layout = () => {
       <h1>Secilen Logo</h1>
       <h4>{logo}</h4>
       <h1>Kargo Firmalari</h1>
-      {shipping.map((item, index) => (
-        <h4 key={index}>{item}</h4>
-      ))}
+      <h4>{shipping}</h4>
     </MainLayout>
   )
 }
