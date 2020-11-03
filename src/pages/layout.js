@@ -1,6 +1,10 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { MainLayout } from 'layouts'
+import { Grid } from '@material-ui/core'
+import parse from 'html-react-parser'
+import { OneHtml } from 'htmls'
+import { logos } from 'components/logos/Logos'
 const Layout = () => {
   const router = useRouter()
   const { shopName, logo, shipping } = router.query
@@ -27,6 +31,13 @@ const Layout = () => {
       <h4>{logo}</h4>
       <h1>Kargo Firmalari</h1>
       <h4>{shipping}</h4>
+      <Grid container>
+        <Grid item xs={12}>
+          {parse(OneHtml(shopName, logos[Number(logo)]), {
+            replace: function (domNode) {},
+          })}
+        </Grid>
+      </Grid>
     </MainLayout>
   )
 }

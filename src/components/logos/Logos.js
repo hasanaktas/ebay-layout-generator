@@ -8,7 +8,7 @@ import {
   Typography,
 } from '@material-ui/core'
 import clsx from 'clsx'
-const logos = [
+export const logos = [
   {
     uri: '/assets/logos/Logo-1.png',
     color: '#EE3E30',

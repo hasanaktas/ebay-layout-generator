@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 250,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: theme.palette.background.default,
   },
   toolbar: {
     display: 'flex',
