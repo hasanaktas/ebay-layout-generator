@@ -8,7 +8,9 @@ import { logos } from 'components/logos/Logos'
 const Layout = () => {
   const router = useRouter()
   const { shopName, logo, shipping } = router.query
-
+  console.log(shopName)
+  console.log(logo)
+  console.log(shipping)
   const backPage = () => {
     router.push({
       pathname: '/shipping',
@@ -33,9 +35,13 @@ const Layout = () => {
       <h4>{shipping}</h4>
       <Grid container>
         <Grid item xs={12}>
-          {parse(OneHtml(shopName, logos[Number(logo)]), {
-            replace: function (domNode) {},
-          })}
+          {logo && (
+            <html
+              dangerouslySetInnerHTML={{
+                __html: OneHtml(shopName, logos[Number(logo)]),
+              }}
+            />
+          )}
         </Grid>
       </Grid>
     </MainLayout>
