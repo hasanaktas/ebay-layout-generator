@@ -61,7 +61,7 @@ const Html = (companyName, logo, shipping) => {
           style="width: 70px; height: 70px;"
         >
        </img>
-        <div style="color: var(--main-color);text-align: center; font-size: 22px; font-weight: 500; margin-bottom: 20px;">erkinshop-24</div>
+        <div style="color: var(--main-color);text-align: center; font-size: 22px; font-weight: 500; margin-bottom: 20px;"> ${companyName}</div>
         <div
         style="padding:5px;background-color: var(--main-color);font-size: 18px;display: flex; justify-content:center; align-items: center; text-align: center; width: 100%; color: white;" >
          WILLKOMMEN ZU UNSEREM OFFIZIELLEN EBAY SHOP
