@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 export default function FinishModal(props) {
   const classes = useStyles()
   const { onClose, selectedValue, open, data } = props
-
+  const [snack, setSnack] = useState(false)
   const handleClose = () => {
     onClose(selectedValue)
   }
@@ -36,10 +36,8 @@ export default function FinishModal(props) {
     onClose(value)
   }
 
-  const [snack, setSnack] = useState(false)
-
   return (
-    <>
+    <React.Fragment>
       <Dialog
         onClose={handleClose}
         aria-labelledby='simple-dialog-title'
@@ -52,8 +50,8 @@ export default function FinishModal(props) {
           </Button>
           <Button
             onClick={() => {
-              navigator.clipboard.writeText(data)
               setSnack(true)
+              navigator.clipboard.writeText(data)
             }}
             color='primary'
           >
@@ -62,15 +60,15 @@ export default function FinishModal(props) {
         </DialogActions>
       </Dialog>
       <Snackbar
+        style={{ zIndex: 50000 }}
         anchorOrigin={{
-          vertical: 'top',
+          vertical: 'bottom',
           horizontal: 'left',
         }}
         open={snack}
-        autoHideDuration={3000}
         onClose={() => setSnack(false)}
         message='KOPYALANDI'
       />
-    </>
+    </React.Fragment>
   )
 }
