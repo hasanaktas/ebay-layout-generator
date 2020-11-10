@@ -1,49 +1,71 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import { MainLayout } from 'layouts'
 import { Grid } from '@material-ui/core'
-import parse from 'html-react-parser'
-import { OneHtml } from 'htmls'
+import { FinishModal } from 'components'
 import { logos } from 'components/logos/Logos'
+import { layouts } from './layouts'
 const Layout = () => {
   const router = useRouter()
-  const { shopName, logo, shipping } = router.query
-  console.log(shopName)
-  console.log(logo)
-  console.log(shipping)
+  const [modalOpen, setModalOpen] = React.useState(false)
+  const { shopName, logo, shipping, layout } = router.query
+
+  const finalData = `name:${shopName},logo:${logo},shipping:${shipping},layout:${layout}`
+
   const backPage = () => {
     router.push({
-      pathname: '/shipping',
-      query: { shopName: shopName, logo: logo },
+      pathname: '/layouts',
+      query: {
+        shopName: shopName,
+        logo: logo,
+        shipping: shipping,
+        layout: layout,
+      },
     })
   }
 
   const nextPage = () => {
     router.push({
       pathname: '/layout',
-      query: { shopName: shopName, logo: logo, shipping: shippingCompanies },
+      query: {
+        shopName: shopName,
+        logo: logo,
+        shipping: shipping,
+        layout: layout,
+      },
     })
   }
 
+  const handleClickOpen = () => {
+    setModalOpen(true)
+  }
+
+  const handleClose = () => {
+    setModalOpen(false)
+  }
+
   return (
-    <MainLayout backButton={{ disabled: false, click: backPage }} step={3}>
-      <h1>Magaza Adi</h1>
-      <h4>{shopName}</h4>
-      <h1>Secilen Logo</h1>
-      <h4>{logo}</h4>
-      <h1>Kargo Firmalari</h1>
-      <h4>{shipping}</h4>
+    <MainLayout
+      backButton={{ disabled: false, click: backPage }}
+      nextButton={{ disabled: false, click: handleClickOpen }}
+      step={4}
+    >
       <Grid container>
         <Grid item xs={12}>
-          {logo && (
+          {logo && shipping && shopName && layout && (
             <html
               dangerouslySetInnerHTML={{
-                __html: OneHtml(shopName, logos[Number(logo)]),
+                __html: layouts[layout].html(
+                  shopName,
+                  logos[Number(logo)],
+                  shipping
+                ),
               }}
             />
           )}
         </Grid>
       </Grid>
+      <FinishModal open={modalOpen} data={finalData} onClose={handleClose} />
     </MainLayout>
   )
 }

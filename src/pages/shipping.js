@@ -25,7 +25,7 @@ const ShippingView = () => {
   }
   const nextPage = () => {
     router.push({
-      pathname: '/layout',
+      pathname: '/layouts',
       query: { shopName: shopName, logo: logo, shipping: shippingCompanies },
     })
   }

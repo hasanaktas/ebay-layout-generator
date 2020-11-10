@@ -2,18 +2,19 @@ import React from 'react'
 import Image from 'next/image'
 import { Grid, Box, ButtonBase, makeStyles } from '@material-ui/core'
 import CheckCircleOutlineOutlinedIcon from '@material-ui/icons/CheckCircleOutlineOutlined'
-const companies = [
+
+export const companies = [
   {
-    uri: '/assets/shipping/dhl.png',
+    uri: 'https://layout.icommercetime.com/assets/shipping/dhl.png',
   },
   {
-    uri: '/assets/shipping/dpd.png',
+    uri: 'https://layout.icommercetime.com/assets/shipping/dpd.png',
   },
   {
-    uri: '/assets/shipping/gls.png',
+    uri: 'https://layout.icommercetime.com/assets/shipping/gls.png',
   },
   {
-    uri: '/assets/shipping/ups.png',
+    uri: 'https://layout.icommercetime.com/assets/shipping/ups.png',
   },
 ]
 
@@ -48,12 +49,10 @@ const ShippingCompanies = (props) => {
                 className={classes.button}
                 onClick={() => onChange(index)}
               >
-                <Image
-                  quality={100}
+                <img
                   src={item.uri}
                   key={index}
-                  width={200}
-                  height={200}
+                  style={{ width: 200, height: 200 }}
                 />
                 {selected.indexOf(index) > -1 && (
                   <Box

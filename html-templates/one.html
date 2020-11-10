@@ -1,26 +1,4 @@
-import { companies as ShippingCompanies } from 'components/shippingCompanies/ShippingCompanies'
-
-const Html = (companyName, logo, shipping) => {
-  console.log(shipping)
-  const shipment = () => {
-    if (Array.isArray(shipping)) {
-      return shipping
-        .map((item, index) => {
-          return `  <div style="width: 140px;height: 140px; display: flex; justify-content: center; align-items: center;box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);margin:20px">
-          <img src="${
-            ShippingCompanies[Number(item)].uri
-          }"  style="width: 100px; height: 100px;" ></img>
-        </div>`
-        })
-        .join('')
-    } else
-      return `<div style="width: 140px;height: 140px; display: flex; justify-content: center; align-items: center;box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);margin:20px">
-      <img src="${ShippingCompanies[shipping].uri}"  style="width: 100px; height: 100px;" ></img>
-    </div>`
-  }
-
-  return `
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -41,7 +19,7 @@ const Html = (companyName, logo, shipping) => {
     />
     <style>
       :root {
-        --main-color: ${logo.color};
+        --main-color: #c41e51;
       }
       * {
         font-family: 'Poppins', Georgia, 'Times New Roman', serif !important;
@@ -57,7 +35,8 @@ const Html = (companyName, logo, shipping) => {
     <div style="max-width: 1000px; margin-left: auto; margin-right: auto;">
       <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-bottom: 20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.05);">
         <img
-          src="${logo.uri}"
+
+          src="https://layout.icommercetime.com/assets/logos/Logo-1.png"
           style="width: 70px; height: 70px;"
         >
        </img>
@@ -98,17 +77,23 @@ const Html = (companyName, logo, shipping) => {
         VERSANDOPTIONEN
       </div>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 20px;">
-          ${shipment()}
+          <div style="width: 140px;height: 140px; display: flex; justify-content: center; align-items: center;box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);margin:20px">
+           <img src="https://layout.icommercetime.com/assets/shipping/dhl.png"  style="width: 100px; height: 100px;" ></img>
+         </div>
+         <div style="width: 140px;height: 140px; display: flex; justify-content: center; align-items: center;box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);margin:20px">
+            <img src="https://layout.icommercetime.com/assets/shipping/dpd.png" style="width: 100px; height: 100px;" ></img>
+          </div>
+          <div style="width: 140px;height: 140px; display: flex; justify-content: center; align-items: center;box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);margin:20px">
+            <img src="https://layout.icommercetime.com/assets/shipping/ups.png"  style="width: 100px; height: 100px;" ></img>
+          </div>
+          <div style="width: 140px;height: 140px; display: flex; justify-content: center; align-items: center;box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);margin:20px">
+            <img src="https://layout.icommercetime.com/assets/shipping/gls.png"  style="width: 100px; height: 100px;" ></img>
+          </div>
       </div>
       <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; background-color: var(--main-color); color: white; padding: 20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15); margin-bottom: 20px;">
-        <div style="font-size: 24px;">${companyName} Copyright © 2021</div>
+        <div style="font-size: 24px;">Erkinshop24 Copyright © 2021</div>
         <div style="font-size: 18px; opacity: 0.8;">Alle Rechte vorbehalten.</div>
     </div>
     </div>
   </body>
 </html>
-
-  `
-}
-
-export default Html

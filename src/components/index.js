@@ -1,3 +1,5 @@
 export { default as SelectLocaleButton } from './selectLocaleButton'
 export { default as Logos } from './logos'
 export { default as ShippingCompanies } from './shippingCompanies'
+export { default as Layouts } from './layouts'
+export { default as FinishModal } from './finishModal'

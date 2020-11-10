@@ -9,4 +9,6 @@ export default {
   back: 'Zurück',
   yourLogo: 'Ihr Logo',
   shippingCompanies: 'Vertragliche Reedereien',
+  selectLayout: 'Wählen Sie Layout',
+  finish: 'Fertig',
 }

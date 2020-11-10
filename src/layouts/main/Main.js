@@ -59,8 +59,8 @@ const MainLayout = (props) => {
     locale.shopName,
     locale.yourLogo,
     locale.shippingCompanies,
-    'Layout Sec',
-    'Bitir',
+    locale.selectLayout,
+    locale.finish,
   ]
   return (
     <div className={classes.root}>

@@ -9,4 +9,6 @@ export default {
   back: 'GERİ',
   yourLogo: 'Logonuz',
   shippingCompanies: 'Anlaşmalı Kargo Firmaları',
+  selectLayout: 'Layout Seç',
+  finish: 'Bitir',
 }

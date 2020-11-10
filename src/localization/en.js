@@ -8,4 +8,6 @@ export default {
   back: 'Back',
   yourLogo: 'Your Logo',
   shippingCompanies: 'Contracted Shipping Companies',
+  selectLayout: 'Select Layout',
+  finish: 'Finish',
 }
