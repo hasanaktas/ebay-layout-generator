@@ -10,4 +10,6 @@ export default {
   shippingCompanies: 'Contracted Shipping Companies',
   selectLayout: 'Select Layout',
   finish: 'Finish',
+  copyLink: 'COPY LINK',
+  successLink: 'Transaction Successful. Send us the link you copied',
 }

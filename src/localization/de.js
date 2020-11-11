@@ -11,4 +11,7 @@ export default {
   shippingCompanies: 'Vertragsmäßige Lieferunternehmen',
   selectLayout: 'Wählen Sie Ihr Layout',
   finish: 'Fertig',
+  copyLink: 'LINK KOPIEREN',
+  successLink:
+    'Transaktion Erfolgreich. Senden Sie uns den Link, den Sie kopiert haben.',
 }

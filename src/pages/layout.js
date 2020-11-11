@@ -66,7 +66,15 @@ const Layout = () => {
           )}
         </Grid>
       </Grid>
-      <FinishModal open={modalOpen} data={finalData} onClose={handleClose} />
+      <FinishModal
+        open={modalOpen}
+        data={finalData}
+        onClose={handleClose}
+        pathname={`https://ebay-layout-generator.vercel.app${router.asPath.replace(
+          'layout?',
+          'export?'
+        )}`}
+      />
     </MainLayout>
   )
 }

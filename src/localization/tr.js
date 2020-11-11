@@ -11,4 +11,6 @@ export default {
   shippingCompanies: 'Anlaşmalı Kargo Firmaları',
   selectLayout: 'Layout Seç',
   finish: 'Bitir',
+  copyLink: 'LİNKİ KOPYALA',
+  successLink: 'İşlem Başarılı. Kopyaladığınız bağlantıyı bize gönderin.',
 }
