@@ -1,6 +1,6 @@
 import { companies as ShippingCompanies } from 'components/shippingCompanies/ShippingCompanies'
 
-const Html = (companyName, logo, shipping) => {
+const Html = (companyName, logo, shipping, preview) => {
   console.log(shipping)
   const shipment = () => {
     if (Array.isArray(shipping)) {
@@ -71,27 +71,42 @@ const Html = (companyName, logo, shipping) => {
         Duygu | 4-er | Bambus | Gewürz-Set | Gewürzdosen | Gewürzbehälter | Weiß | Aus Bambus & Porzellan | Inkl.Platte | Dg-6213
      </div>
      <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items:center">
-        <img src="https://www.bedibuy.com/media/image/d6/af/ea/tfd-sm-90black_50440950453_o.jpg" style="width: 400px;height: auto; margin: 20px;box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);" ></img>
-
-        <img src="https://www.bedibuy.com/media/image/d0/g0/05/TFD-SM-70Black-4.jpg" style="width: 400px; height: auto; margin:20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15); " ></img>
-        <img src="https://www.bedibuy.com/media/image/3d/2b/80/TFD-SM-70Black-3.jpg" style="width: 400px;height: auto; margin: 20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);" ></img>
-        <img src="https://www.bedibuy.com/media/image/34/d7/e9/TFD-SM-70Black-2.jpg"  style="width: 400px; height: auto; margin: 20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);" ></img>
+     ${
+       preview
+         ? `
+       <img src="https://www.bedibuy.com/media/image/d6/af/ea/tfd-sm-90black_50440950453_o.jpg" style="width: 400px;height: auto; margin: 20px;box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);" ></img>
+       <img src="https://www.bedibuy.com/media/image/d0/g0/05/TFD-SM-70Black-4.jpg" style="width: 400px; height: auto; margin:20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15); " ></img>
+       <img src="https://www.bedibuy.com/media/image/3d/2b/80/TFD-SM-70Black-3.jpg" style="width: 400px;height: auto; margin: 20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);" ></img>
+       <img src="https://www.bedibuy.com/media/image/34/d7/e9/TFD-SM-70Black-2.jpg"  style="width: 400px; height: auto; margin: 20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);" ></img>`
+         : `<img src="#PICTURE1#"  style="width: 400px; height: auto; margin: 20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);" ></img>
+       <img src="#PICTURE2#"  style="width: 400px; height: auto; margin: 20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);" ></img>
+       <img src="#PICTURE3#"  style="width: 400px; height: auto; margin: 20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);" ></img>
+       <img src="#PICTURE4#"  style="width: 400px; height: auto; margin: 20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);" ></img>
+       <img src="#PICTURE5#"  style="width: 400px; height: auto; margin: 20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);" ></img>
+       <img src="#PICTURE6#"  style="width: 400px; height: auto; margin: 20px; box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.15);" ></img>`
+     }
+      
      </div>
      <div   style="color: var(--main-color);font-size: 30px;font-weight: 700; text-align: center; margin-bottom: 10px;">
        BESCHREIBUNG
      </div>
      <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 20px;">
-        <p  style="text-align: left;" align="center"><span style="font-size: medium; color: #888888;"><strong>Marke:&nbsp;</strong>Dekonaz</span></p>
-        <p  style="text-align: left;" align="center"><span style="font-size: medium; color: #888888;"><strong>Farbe / Muster:</strong>&nbsp;Grau / Marmor Design</span></p>
-        <p  style="text-align: left;"><span style="font-size: medium; color: #888888;"><strong>Material</strong>: Faserplatte / Metall</span></p>
-        <p style="text-align: left;"><span style="font-size: medium; color: #888888;"><strong>Gewicht</strong>: 8 kg&nbsp;</span></p>
-        <p  style="text-align: left;"><span style="font-size: medium; color: #888888;"><strong>Lieferung und Ma&szlig;e</strong>: 1x Dekonaz | Traditionelle Bodentisch</span></p>
-        <p  style="text-align: left;"><span style="font-size: medium; color: #888888;">90 cm</span></p>
-        <p  style="text-align: left;"><strong style="color: #888888; font-size: medium;">Mehr Informationen</strong></p>
-        <p  style="text-align: left;"><span style="font-size: medium; color: #888888;">- Das Material unseres Produkts hat das E1-Zertifikat</span></p>
-        <p  style="text-align: left;"><span style="font-size: medium; color: #888888;">- Tischdicke (18 mm)</span></p>
-        <p  style="text-align: left;"><span style="font-size: medium; color: #888888;">- Tischbeinh&ouml;he (15 cm)</span></p>
-        <p  style="text-align: left;"><span style="font-size: medium; color: #888888;">- Bodenfreiheit (Tischbeine offen) 21 cm</span></p>
+     ${
+       preview
+         ? ` <p  style="text-align: left;" align="center"><span style="font-size: medium; color: #888888;"><strong>Marke:&nbsp;</strong>Dekonaz</span></p>
+     <p  style="text-align: left;" align="center"><span style="font-size: medium; color: #888888;"><strong>Farbe / Muster:</strong>&nbsp;Grau / Marmor Design</span></p>
+     <p  style="text-align: left;"><span style="font-size: medium; color: #888888;"><strong>Material</strong>: Faserplatte / Metall</span></p>
+     <p style="text-align: left;"><span style="font-size: medium; color: #888888;"><strong>Gewicht</strong>: 8 kg&nbsp;</span></p>
+     <p  style="text-align: left;"><span style="font-size: medium; color: #888888;"><strong>Lieferung und Ma&szlig;e</strong>: 1x Dekonaz | Traditionelle Bodentisch</span></p>
+     <p  style="text-align: left;"><span style="font-size: medium; color: #888888;">90 cm</span></p>
+     <p  style="text-align: left;"><strong style="color: #888888; font-size: medium;">Mehr Informationen</strong></p>
+     <p  style="text-align: left;"><span style="font-size: medium; color: #888888;">- Das Material unseres Produkts hat das E1-Zertifikat</span></p>
+     <p  style="text-align: left;"><span style="font-size: medium; color: #888888;">- Tischdicke (18 mm)</span></p>
+     <p  style="text-align: left;"><span style="font-size: medium; color: #888888;">- Tischbeinh&ouml;he (15 cm)</span></p>
+     <p  style="text-align: left;"><span style="font-size: medium; color: #888888;">- Bodenfreiheit (Tischbeine offen) 21 cm</span></p>`
+         : `#DESCRIPTION#`
+     }
+       
       
      </div>
      <div   style="color: var(--main-color);font-size: 30px;font-weight: 700; text-align: center; margin-bottom: 10px;">

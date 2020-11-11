@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import { MainLayout } from 'layouts'
-import { Grid } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 import { FinishModal } from 'components'
 import { logos } from 'components/logos/Logos'
 import { layouts } from './layouts'
@@ -45,29 +45,20 @@ const Layout = () => {
   }
 
   return (
-    <MainLayout
-      backButton={{ disabled: false, click: backPage }}
-      nextButton={{ disabled: false, click: handleClickOpen }}
-      step={4}
-    >
-      <Grid container>
-        <Grid item xs={12}>
-          {logo && shipping && shopName && layout && (
-            <html
-              dangerouslySetInnerHTML={{
-                __html: layouts[layout].html(
-                  shopName,
-                  logos[Number(logo)],
-                  shipping,
-                  true
-                ),
-              }}
-            />
-          )}
-        </Grid>
+    <Grid container>
+      <Grid item xs={12}>
+        {logo && shipping && shopName && layout && (
+          <Typography>
+            {layouts[layout].html(
+              shopName,
+              logos[Number(logo)],
+              shipping,
+              false
+            )}
+          </Typography>
+        )}
       </Grid>
-      <FinishModal open={modalOpen} data={finalData} onClose={handleClose} />
-    </MainLayout>
+    </Grid>
   )
 }
 
