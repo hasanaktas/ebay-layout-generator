@@ -1,14 +1,14 @@
 import { DeutscheIcon } from 'components/icon'
 
 export default {
-  name: 'Deutsche',
+  name: 'Deutsch',
   headerTitle: 'Ebay Layout Generator',
   icon: DeutscheIcon,
-  shopName: 'Laden Name',
-  next: 'Nächster',
+  shopName: 'Shop Name',
+  next: 'Weiter',
   back: 'Zurück',
   yourLogo: 'Ihr Logo',
-  shippingCompanies: 'Vertragliche Reedereien',
-  selectLayout: 'Wählen Sie Layout',
+  shippingCompanies: 'Vertragsmäßige Lieferunternehmen',
+  selectLayout: 'Wählen Sie Ihr Layout',
   finish: 'Fertig',
 }
