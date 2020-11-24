@@ -1,6 +1,6 @@
 import { companies as ShippingCompanies } from 'components/shippingCompanies/ShippingCompanies'
 
-const Html = (companyName, logo, shipping) => {
+const Html = (companyName, logo, shipping, preview) => {
   console.log(shipping)
   const shipment = () => {
     if (Array.isArray(shipping)) {
@@ -280,6 +280,9 @@ const Html = (companyName, logo, shipping) => {
           </h3>
 
           <div class="blog-post">
+          ${
+            preview
+              ? `
             <img
               src="https://www.bedibuy.com/media/image/c1/a2/a8/dg-dg-6213.jpg"
               class="product-image mb-2"
@@ -295,22 +298,55 @@ const Html = (companyName, logo, shipping) => {
               class="product-image mb-2"
               alt="image"
             />
+            `
+              : `
+            <img
+            src="#PICTURE1#" 
+            class="product-image mb-2"
+            alt="image"
+          />
+          <img
+          src="#PICTURE2#" 
+          class="product-image mb-2"
+          alt="image"
+        />
+        <img
+        src="#PICTURE3#" 
+        class="product-image mb-2"
+        alt="image"
+      />
+      <img
+      src="#PICTURE4#" 
+      class="product-image mb-2"
+      alt="image"
+    />
+    <img
+    src="#PICTURE5#" 
+    class="product-image mb-2"
+    alt="image"
+  />`
+          }
           </div>
           <div class="blog-post">
             <h3 class="pb-4 mb-4 font-italic border-bottom color-primary">
               BESCHREIBUNG
             </h3>
-            <p>Marke: Duygu</p>
-            <p>Farbe: Weiß</p>
-            <p>Material: Bambus & Porzellan</p>
-            <p>
-              Lieferumfang und Abmessung: 1 x Duygu | 4-er | Bambus | Gewürz-Set
-              | Gewürzdosen | Gewürzbehälter | Weiß | Aus Bambus & Porzellan |
-              Inkl.Platte | Dg-6213
-            </p>
-            <p>ca. 38 cm x 10 cm x 11 cm</p>
-            <p>4 x Gewürzdose (Porzellan)+ Deckel (Bambus)</p>
-            <p>1 x Platte (Bambus)</p>
+            ${
+              preview
+                ? ` <p>Marke: Duygu</p>
+              <p>Farbe: Weiß</p>
+              <p>Material: Bambus & Porzellan</p>
+              <p>
+                Lieferumfang und Abmessung: 1 x Duygu | 4-er | Bambus | Gewürz-Set
+                | Gewürzdosen | Gewürzbehälter | Weiß | Aus Bambus & Porzellan |
+                Inkl.Platte | Dg-6213
+              </p>
+              <p>ca. 38 cm x 10 cm x 11 cm</p>
+              <p>4 x Gewürzdose (Porzellan)+ Deckel (Bambus)</p>
+              <p>1 x Platte (Bambus)</p>`
+                : `<p>#DESCRIPTION#</p>`
+            }
+           
           </div>
         </div>
 
