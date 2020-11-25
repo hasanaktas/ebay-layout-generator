@@ -68,7 +68,11 @@ const Html = (companyName, logo, shipping, preview) => {
         </div>
       </div>
       <div  style="color: var(--main-color);font-size: 30px;font-weight: 700; text-align: center; margin-bottom: 20px;">
-        Duygu | 4-er | Bambus | Gewürz-Set | Gewürzdosen | Gewürzbehälter | Weiß | Aus Bambus & Porzellan | Inkl.Platte | Dg-6213
+      ${
+        preview
+          ? `Duygu | 4-er | Bambus | Gewürz-Set | Gewürzdosen | Gewürzbehälter | Weiß | Aus Bambus & Porzellan | Inkl.Platte | Dg-6213`
+          : `#TITLE#`
+      }  
      </div>
      <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items:center">
      ${

@@ -275,8 +275,11 @@ const Html = (companyName, logo, shipping, preview) => {
       <div class="row">
         <div class="col-md-9 blog-main">
           <h3 class="pb-4 mb-4 font-italic border-bottom color-primary">
-            Duygu | 4-er | Bambus | Gewürz-Set | Gewürzdosen | Gewürzbehälter |
-            Weiß | Aus Bambus & Porzellan | Inkl.Platte | Dg-6213
+          ${
+            preview
+              ? `Duygu | 4-er | Bambus | Gewürz-Set | Gewürzdosen | Gewürzbehälter | Weiß | Aus Bambus & Porzellan | Inkl.Platte | Dg-6213`
+              : `#TITLE#`
+          }  
           </h3>
 
           <div class="blog-post">
